@@ -81,7 +81,7 @@ a, b = b, a
 ```Python
 def dedup(items):
     no_dup_items = []
-    seen = set()
+    seen = set() # 也可以直接历遍整个列表，大刀同样效果，但是历遍set的时间不会随着集合大小而增长。所以大数据是还是加一个set.
     for item in items:
         if item not in seen:
             no_dup_items.append(item)
